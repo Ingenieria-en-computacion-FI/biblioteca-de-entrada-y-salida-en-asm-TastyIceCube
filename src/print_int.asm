@@ -1,4 +1,4 @@
-SECTION .bss
+SECTION .bss ;codigo realizado en clase
 buffer_int resb 12
 
 SECTION .text
@@ -63,7 +63,7 @@ print_int:
 
 .print:
 
-    inc edi             ; apuntar al primer dígito    
+    inc edi              ; apuntar al primer dígito    
     
     ; syscall Linux write: eax=4, ebx=1(stdout), ecx=ptr, edx=len
     mov eax, 4

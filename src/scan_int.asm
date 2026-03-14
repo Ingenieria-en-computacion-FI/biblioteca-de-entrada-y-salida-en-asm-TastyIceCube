@@ -1,4 +1,4 @@
-SECTION .bss
+SECTION .bss ;codigo realizado en la clase
 buffer_int resb 12
 
 SECTION .text
@@ -36,6 +36,8 @@ scan_int:
 
     mov cl, [esi]
     cmp cl, 10            ; compara con salto de línea
+    je .done
+    cmp cl, 0             ; termina en caso de encontrar nulo
     je .done
 
     sub cl, '0'
